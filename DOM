@@ -1,4 +1,4 @@
-**Summary**
+<pre><b>Summary</b></pre>
 Given a DOM node, we can go to its immediate neighbours using navigation properties.
 
 There are two main sets of them:
