@@ -1,3 +1,4 @@
+////////////////////// CLASS //////////////////////////////////////////
 class Speaker {  
   constructor(name, verb){
     this.name = name
@@ -22,7 +23,7 @@ class Shouter extends Speaker {
 
 new Shouter("Dr. Loudmouth").speak("hello there")
 
-
+////////////////////// PROTOTYPE //////////////////////////////////////////
 function Speaker(name, verb) {
   this.name = name
   this.verb = verb || "says"
