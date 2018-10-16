@@ -1,3 +1,20 @@
+////////////////////// FUNCTION CONSTRUCTOR //////////////////////////////////////////
+function Point(a, b) {
+	this.a = a;
+  	this.b = b;
+  
+  	this.plus = function (point) {
+    	var self = this;
+      	self.a = self.a + point.a;
+      	self.b = self.b + point.b;
+      return this;
+    }
+}
+
+console.log(new Point(1, 2).plus(new Point(2, 1)))
+// → Point{x: 3, y: 3}
+
+
 ////////////////////// CLASS //////////////////////////////////////////
 class Speaker {  
   constructor(name, verb){
