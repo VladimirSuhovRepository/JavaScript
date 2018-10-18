@@ -1,3 +1,18 @@
+////////////////////// OBJECT PROPERTIES //////////////////////////////////////////
+function startNode(type, value, options) {
+  let res = {type: type, value: value}
+  Object.defineProperty(res, "fds", {value: options.sourceValue,  writable: false})  
+  return res;
+}
+
+console.log(startNode("Identifier", "foo", {
+  sourceProperty: "src",
+  sourceValue: "bar.js"
+}))
+// → {type: "Identifier",
+//    value: "foo",
+//    src: "bar.js"}
+
 ////////////////////// FUNCTION CONSTRUCTOR //////////////////////////////////////////
 function Point(a, b) {
 	this.a = a;
