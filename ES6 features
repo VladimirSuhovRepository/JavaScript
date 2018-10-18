@@ -1,7 +1,7 @@
 ////////////////////// OBJECT PROPERTIES //////////////////////////////////////////
 function startNode(type, value, options) {
   let res = {type: type, value: value}
-  Object.defineProperty(res, "fds", {value: options.sourceValue,  writable: false})  
+  Object.defineProperty(res, options.sourceProperty, {value: options.sourceValue,  writable: false})  
   return res;
 }
 
