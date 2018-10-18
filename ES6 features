@@ -1,3 +1,27 @@
+////////////////////// SORTED ARRAY //////////////////////////////////////////
+class SortedArray {
+  constructor(compare){
+  	this.compare = compare
+  	this.content = []
+  }  
+  
+   findPos(elt) {
+   		return this.content.findIndex(x => this.compare(elt, x) < 0);
+	}
+  
+   insert(elt) {
+  		this.content.splice(this.findPos(elt), 0, elt)
+	}
+}
+
+var sorted = new SortedArray(function(a, b) { return a - b })
+sorted.insert(5)
+sorted.insert(1)
+sorted.insert(2)
+sorted.insert(4)
+sorted.insert(3)
+console.log("array:", sorted.content)
+
 ////////////////////// OBJECT PROPERTIES //////////////////////////////////////////
 function startNode(type, value, options) {
   let res = {type: type, value: value}
